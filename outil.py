@@ -28,7 +28,7 @@ ETAT = ICI / ".publication.json"
 
 
 def lire_config(ftp_requis=False):
-    config = configparser.ConfigParser()
+    config = configparser.ConfigParser(interpolation=None)
     config.read(ICI / "config.exemple.ini", encoding="utf-8")
     if CONFIG.exists():
         config.read(CONFIG, encoding="utf-8")
@@ -142,4 +142,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import ftplib
+    try:
+        main()
+    except ftplib.error_perm as e:
+        if str(e).startswith("530"):
+            sys.exit("Connexion refusée par le serveur FTP : identifiant ou mot de passe incorrect.\n"
+                     "Vérifiez-les dans votre espace client OVH (Hébergements > FTP - SSH) puis corrigez config.ini.")
+        raise

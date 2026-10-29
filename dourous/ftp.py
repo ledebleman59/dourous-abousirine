@@ -10,18 +10,21 @@ def connecter(config, journal=print):
     hote, utilisateur, mot_de_passe = config["hote"], config["utilisateur"], config["mot_de_passe"]
     chiffrement = config.get("chiffrement", "auto").lower()
     if chiffrement in ("auto", "oui"):
+        ftp = None
         try:
             ftp = ftplib.FTP_TLS(hote, timeout=60)
+            ftp.auth()
+        except Exception as e:
+            if ftp is not None:
+                ftp.close()
+            if chiffrement == "oui":
+                raise
+            journal(f"(connexion chiffrée non proposée par le serveur : {e} ; connexion FTP simple)")
+        else:
             ftp.login(utilisateur, mot_de_passe)
             ftp.prot_p()
             ftp.encoding = "utf-8"
             return ftp
-        except ftplib.error_perm:
-            raise
-        except Exception as e:
-            if chiffrement == "oui":
-                raise
-            journal(f"(connexion chiffrée impossible : {e} ; connexion FTP simple)")
     ftp = ftplib.FTP(hote, timeout=60)
     ftp.login(utilisateur, mot_de_passe)
     ftp.encoding = "utf-8"
