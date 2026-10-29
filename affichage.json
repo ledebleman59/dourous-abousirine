@@ -1,0 +1,41 @@
+{
+  "_aide": "Réglages d'affichage. Les clés sont les chemins des dossiers sur le FTP, à partir du dossier audio.",
+
+  "renommer": {
+    "Khutba joumou3a": "Khutba Joumou3a",
+    "Conferences": "Conférences",
+    "Cours Enfants": "Cours enfants",
+    "Cours/Fiqh - Jurisprudence": "Fiqh",
+    "Cours/Tafsir/01 - Sourate Al Fatiha": "1 · Sourate Al Fatiha",
+    "Cours/Tafsir/18 - Al Kahf": "18 · Sourate Al Kahf",
+    "Cours/Tafsir/103 - Sourate Al Asr": "103 · Sourate Al 'Asr",
+    "Cours/Tafsir/104 - Sourate Al Houmaza": "104 · Sourate Al Humaza",
+    "Cours/Tafsir/107 - Sourate Ma3oun": "107 · Sourate Al Ma'un",
+    "Cours/Tafsir/108 - Sourate Kawtar": "108 · Sourate Al Kawthar",
+    "Cours/Tafsir/109 - Sourate Kafirun": "109 · Sourate Al Kafirun",
+    "Cours/Tafsir/111 - Sourate Massad": "111 · Sourate Al Masad",
+    "Cours/Tafsir/112 - Sourate Al Ikhlass": "112 · Sourate Al Ikhlas",
+    "Cours/Tafsir/113 - Al Falaq": "113 · Sourate Al Falaq",
+    "Cours/Croyance/La croyance de l'Imam Malik (Muqadima de Ibn Abi Zayd Al Qayrawani)": "La croyance de l'imam Malik"
+  },
+
+  "fusionner": ["Conferences/Anchor", "Conferences/Offline"],
+
+  "masquer": [],
+
+  "ordre": ["Cours", "Khutba joumou3a", "Conferences", "Cours Enfants",
+            "Cours/Tafsir", "Cours/Croyance", "Cours/Fiqh - Jurisprudence", "Cours/Rappels"],
+
+  "descriptions": {
+    "Cours": "Tafsir, croyance, fiqh, hadith, hajj et histoire des prophètes.",
+    "Khutba joumou3a": "Les sermons du vendredi, classés par thème.",
+    "Conferences": "Des conférences thématiques pour accompagner chaque moment de l'année.",
+    "Cours Enfants": "Croyance, comportement, histoire et tafsir expliqués aux plus jeunes.",
+    "Cours/Tafsir": "Explication des sourates, des versets du jeûne et des sciences du Coran.",
+    "Cours/Croyance": "Les fondements de la croyance, d'après la Muqaddima d'Ibn Abi Zayd al-Qayrawani.",
+    "Cours/Fiqh - Jurisprudence": "La jurisprudence au quotidien : purification, prière et jeûne.",
+    "Cours/Rappels": "Les 40 hadiths de Nawawi, le tachahhud, Ramadan et l'épître sur les mères des croyants.",
+    "Cours/Hajj": "Le pèlerinage, ses piliers, ses obligations et ses leçons.",
+    "Cours/Histoire des Prophètes": "Le récit des prophètes, que la paix soit sur eux, d'Adam à Ibrahim."
+  }
+}

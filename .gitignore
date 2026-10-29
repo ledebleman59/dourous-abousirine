@@ -1,0 +1,4 @@
+config.ini
+.publication.json
+dist/
+__pycache__/
